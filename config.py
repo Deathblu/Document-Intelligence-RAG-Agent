@@ -1,3 +1,1 @@
-# config.py
-
-BACKEND_URL = "https://your-render-app.onrender.com"
+BACKEND_URL = "https://rag-agent-backend-2ttp.onrender.com"
