@@ -1,3 +1,5 @@
+import config
+
 import streamlit as st
 import requests
 
@@ -453,7 +455,7 @@ with st.sidebar:
             }
 
             response = requests.post(
-                "http://127.0.0.1:8000/upload",
+                f"{config.BACKEND_URL}/upload",
                 files=files
             )
 
@@ -538,7 +540,7 @@ if st.session_state.pdf_uploaded:
                 try:
 
                     response = requests.get(
-                        "http://127.0.0.1:8000/ask",
+                        f"{config.BACKEND_URL}/ask",
                         params={"query": prompt}
                     )
 
